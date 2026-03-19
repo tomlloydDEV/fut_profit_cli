@@ -27,6 +27,7 @@ def read_sale_prints(csv_path: Path) -> list[SalePrint]:
     return sale_prints
 
 
+# test (implement something better later)
 if __name__ == "__main__":
     csv_file_path = "data/fixtures/mctominay_fut_birthday_sales.csv"
     sale_prints = read_sale_prints(Path(csv_file_path))
