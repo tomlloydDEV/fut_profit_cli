@@ -21,6 +21,7 @@ def build_bars(sale_prints: list[SalePrint], timeframe_minutes: int) -> list[Bar
     return bars
 
 
+# test
 if __name__ == "__main__":
     from fc26.storage.db import init_db
     from fc26.storage.sale_print_repo import get_sale_prints
