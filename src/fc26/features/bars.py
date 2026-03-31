@@ -16,7 +16,24 @@ def build_bars(sale_prints: list[SalePrint], timeframe_minutes: int) -> list[Bar
         buckets[bucket_start].append(sale_print)
 
     for bucket_start, bucket_sale_prints in buckets.items():
-        print(bucket_start, len(bucket_sale_prints))
+        open_price = bucket_sale_prints[0].price_gross
+        high_price = max(sp.price_gross for sp in bucket_sale_prints)
+        low_price = min(sp.price_gross for sp in bucket_sale_prints)
+        close_price = bucket_sale_prints[-1].price_gross
+        volume = len(bucket_sale_prints)
+
+        bar = Bar(
+            asset_id=bucket_sale_prints[0].asset_id,
+            platform=bucket_sale_prints[0].platform,
+            timeframe=f"{timeframe_minutes}m",
+            window_start_utc=bucket_start,
+            open=open_price,
+            high=high_price,
+            low=low_price,
+            close=close_price,
+            volume=volume,
+        )
+        bars.append(bar)
 
     return bars
 
@@ -34,6 +51,12 @@ if __name__ == "__main__":
         platform="ps",
     )
 
-    build_bars(sale_prints, 15)
+    bars = build_bars(sale_prints, 15)
+
+    print("RUNNER STARTED")
+    print(f"Built {len(bars)} bars")
+
+    for bar in bars:
+        print(bar)
 
     conn.close()
