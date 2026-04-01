@@ -7,15 +7,27 @@ def build_bars(sale_prints: list[SalePrint], timeframe_minutes: int) -> list[Bar
 
     for sale_print in sale_prints:
         ts = sale_print.ts_utc
-        bucket_minute = (ts.minute // timeframe_minutes) * timeframe_minutes
-        bucket_start = ts.replace(minute=bucket_minute, second=0, microsecond=0)
+        total_minutes = ts.hour * 60 + ts.minute
+        bucket_total_minutes = (total_minutes // timeframe_minutes) * timeframe_minutes
+
+        bucket_hour = bucket_total_minutes // 60
+        bucket_minute = bucket_total_minutes % 60
+
+        bucket_start = ts.replace(
+            hour=bucket_hour,
+            minute=bucket_minute,
+            second=0,
+            microsecond=0,
+        )
 
         if bucket_start not in buckets:
             buckets[bucket_start] = []
 
         buckets[bucket_start].append(sale_print)
 
-    for bucket_start, bucket_sale_prints in buckets.items():
+    for bucket_start in sorted(buckets):
+        bucket_sale_prints = buckets[bucket_start]
+
         open_price = bucket_sale_prints[0].price_gross
         high_price = max(sp.price_gross for sp in bucket_sale_prints)
         low_price = min(sp.price_gross for sp in bucket_sale_prints)
@@ -47,11 +59,11 @@ if __name__ == "__main__":
 
     sale_prints = get_sale_prints(
         conn,
-        asset_id="mctominay-fut-birthday",
+        asset_id="arda-guler-fantasy-fc",
         platform="ps",
     )
 
-    bars = build_bars(sale_prints, 15)
+    bars = build_bars(sale_prints, 240)
 
     print("RUNNER STARTED")
     print(f"Built {len(bars)} bars")

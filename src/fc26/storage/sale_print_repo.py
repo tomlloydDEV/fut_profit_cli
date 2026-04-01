@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     sale_prints = get_sale_prints(
         conn,
-        asset_id="mctominay-fut-birthday",
+        asset_id="arda-guler-fantasy-fc",
         platform="ps",
     )
 
