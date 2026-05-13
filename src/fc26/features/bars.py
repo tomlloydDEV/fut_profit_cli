@@ -1,3 +1,5 @@
+from pickletools import dis
+
 from fc26.domain.models import Bar, SalePrint
 
 
@@ -31,6 +33,7 @@ def build_bars(sale_prints: list[SalePrint], timeframe_minutes: int) -> list[Bar
         open_price = bucket_sale_prints[0].price_gross
         high_price = max(sp.price_gross for sp in bucket_sale_prints)
         low_price = min(sp.price_gross for sp in bucket_sale_prints)
+        dispersion = high_price - low_price
         close_price = bucket_sale_prints[-1].price_gross
         volume = len(bucket_sale_prints)
 
@@ -44,6 +47,7 @@ def build_bars(sale_prints: list[SalePrint], timeframe_minutes: int) -> list[Bar
             low=low_price,
             close=close_price,
             volume=volume,
+            dispersion=dispersion,
         )
         bars.append(bar)
 
