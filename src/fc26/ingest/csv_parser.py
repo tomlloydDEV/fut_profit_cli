@@ -25,14 +25,3 @@ def read_sale_prints(csv_path: Path) -> list[SalePrint]:
             sale_prints.append(sale_print)
 
     return sale_prints
-
-
-# test (implement something better later)
-if __name__ == "__main__":
-    csv_file_path = "data/fixtures/mctominay_fut_birthday_sales.csv"
-    sale_prints = read_sale_prints(Path(csv_file_path))
-
-    print(f"Read {len(sale_prints)} sale prints")
-
-    for sale_print in sale_prints:
-        print(sale_print)

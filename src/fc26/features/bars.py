@@ -52,27 +52,3 @@ def build_bars(sale_prints: list[SalePrint], timeframe_minutes: int) -> list[Bar
         bars.append(bar)
 
     return bars
-
-
-# test
-if __name__ == "__main__":
-    from fc26.storage.db import init_db
-    from fc26.storage.sale_print_repo import get_sale_prints
-
-    conn = init_db()
-
-    sale_prints = get_sale_prints(
-        conn,
-        asset_id="arda-guler-fantasy-fc",
-        platform="ps",
-    )
-
-    bars = build_bars(sale_prints, 240)
-
-    print("RUNNER STARTED")
-    print(f"Built {len(bars)} bars")
-
-    for bar in bars:
-        print(bar)
-
-    conn.close()

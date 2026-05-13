@@ -50,21 +50,3 @@ def get_sale_prints(conn, asset_id, platform):
         sale_prints.append(sale_print)
 
     return sale_prints
-
-
-# temp
-if __name__ == "__main__":
-    print("RUNNER STARTED")
-    from fc26.storage.db import init_db
-
-    conn = init_db()
-
-    sale_prints = get_sale_prints(
-        conn,
-        asset_id="arda-guler-fantasy-fc",
-        platform="ps",
-    )
-
-    print("RESULT:", sale_prints)
-
-    conn.close()

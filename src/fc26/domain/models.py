@@ -21,3 +21,4 @@ class Bar:
     low: int
     close: int
     volume: int
+    dispersion: int
