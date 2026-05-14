@@ -28,8 +28,3 @@ def init_db(db_path: Path = DB_PATH) -> sqlite3.Connection:
     conn = get_db_connection(db_path)
     ensure_schema(conn)
     return conn
-
-
-if __name__ == "__main__":
-    conn = init_db()
-    print(f"Database ready at: {DB_PATH}")

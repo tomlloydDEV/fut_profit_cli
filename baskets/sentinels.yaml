@@ -1,0 +1,39 @@
+name: sentinels_test
+basket_type: sentinel
+platform: ps
+description: Temporary sentinel basket for fast-reacting cards that could reveal regime changes from SBCs, promos, content drops, or gameplay shifts.
+assets:
+  - asset_id: gold_market_sentinel_attacker
+    futbin_id: "placeholder_300001"
+    name: Example Gold Meta Attacker
+    version: Gold
+    role: attacker
+    notes: Placeholder for broad attacking demand.
+
+  - asset_id: gold_market_sentinel_midfielder
+    futbin_id: "placeholder_300002"
+    name: Example Gold Meta Midfielder
+    version: Gold
+    role: midfielder
+    notes: Placeholder for central meta demand.
+
+  - asset_id: gold_market_sentinel_defender
+    futbin_id: "placeholder_300003"
+    name: Example Gold Meta Defender
+    version: Gold
+    role: defender
+    notes: Placeholder for defensive meta demand.
+
+  - asset_id: fodder_sentinel_88
+    futbin_id: "placeholder_300004"
+    name: Example 88 Rated Fodder
+    version: Gold
+    role: fodder
+    notes: Placeholder for SBC pressure detection.
+
+  - asset_id: promo_supply_sentinel
+    futbin_id: "placeholder_300005"
+    name: Example Promo Supply Sentinel
+    version: Promo
+    role: market_sentinel
+    notes: Placeholder for promo-card supply/liquidity changes.

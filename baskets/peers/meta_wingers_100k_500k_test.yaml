@@ -1,0 +1,44 @@
+name: meta_wingers_100k_500k_test
+basket_type: peer
+platform: ps
+description: Temporary peer basket for testing winger peer-group trend analysis.
+peer_group:
+  position: Winger
+  price_band: 100k_500k
+  meta_tier: strong
+  comparison_reason: Pace, dribbling, attacking links, and wide attacker demand.
+assets:
+  - asset_id: dembele_gold
+    futbin_id: "placeholder_400001"
+    name: Ousmane Dembélé
+    version: Gold
+    role: winger
+    notes: Existing liquid-style winger fixture asset.
+
+  - asset_id: meta_lw_promo_placeholder
+    futbin_id: "placeholder_400002"
+    name: Example Promo LW
+    version: Promo
+    role: winger
+    notes: Placeholder for rare left-wing comparison.
+
+  - asset_id: meta_rw_promo_placeholder
+    futbin_id: "placeholder_400003"
+    name: Example Promo RW
+    version: Promo
+    role: winger
+    notes: Placeholder for rare right-wing comparison.
+
+  - asset_id: explosive_winger_placeholder
+    futbin_id: "placeholder_400004"
+    name: Example Explosive Winger
+    version: Special
+    role: winger
+    notes: Placeholder for pace-heavy attacker.
+
+  - asset_id: technical_winger_placeholder
+    futbin_id: "placeholder_400005"
+    name: Example Technical Winger
+    version: Special
+    role: winger
+    notes: Placeholder for dribbling-heavy attacker.

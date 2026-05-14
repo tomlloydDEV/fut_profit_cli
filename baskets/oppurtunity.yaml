@@ -1,0 +1,39 @@
+name: opportunity_test
+basket_type: opportunity
+platform: ps
+description: Temporary opportunity basket for rare or inelastic-supply cards where exhaustion-buy logic will later be tested.
+assets:
+  - asset_id: mctominay_fut_birthday
+    futbin_id: "placeholder_200001"
+    name: Scott McTominay
+    version: FUT Birthday
+    role: midfielder
+    notes: Existing fixture asset; good for testing opportunity workflow plumbing.
+
+  - asset_id: arda_guler_special
+    futbin_id: "placeholder_200002"
+    name: Arda Güler
+    version: Special
+    role: attacker
+    notes: Existing sparse/thin-market fixture-style asset.
+
+  - asset_id: promo_winger_rare_meta
+    futbin_id: "placeholder_200003"
+    name: Example Rare Meta Winger
+    version: Promo
+    role: winger
+    notes: Placeholder for out-of-pack attacker with thin supply.
+
+  - asset_id: promo_cm_box_to_box
+    futbin_id: "placeholder_200004"
+    name: Example Promo Box-to-Box CM
+    version: Promo
+    role: box_to_box_midfielder
+    notes: Placeholder for volatile meta midfielder.
+
+  - asset_id: promo_cb_elite_pace
+    futbin_id: "placeholder_200005"
+    name: Example Elite Pace CB
+    version: Promo
+    role: centre_back
+    notes: Placeholder for rare defender where supply drain could matter.

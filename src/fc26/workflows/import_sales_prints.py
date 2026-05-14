@@ -14,13 +14,3 @@ def import_sales_prints_from_csv(csv_path: Path) -> int:
 
     conn.close()
     return len(sales_prints)
-
-
-# temporary test to remove later
-if __name__ == "__main__":
-    from pathlib import Path
-
-    csv_path = Path("data/fixtures/Guler_fantasy_FC_sales.csv")
-    imported_count = import_sales_prints_from_csv(csv_path)
-
-    print(f"Imported {imported_count} sale_prints")

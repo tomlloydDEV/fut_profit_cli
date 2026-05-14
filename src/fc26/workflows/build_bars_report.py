@@ -12,16 +12,3 @@ def get_bars(asset_id, platform, timeframe_minutes) -> list[Bar]:
         return bars
     finally:
         conn.close()
-
-
-if __name__ == "__main__":
-    bars = get_bars(
-        asset_id="arda-guler-fantasy-fc",
-        platform="ps",
-        timeframe_minutes=60,
-    )
-
-    print(f"Built {len(bars)} bars")
-
-    for bar in bars:
-        print(bar)

@@ -1,0 +1,44 @@
+name: meta_cbs_100k_500k_test
+basket_type: peer
+platform: ps
+description: Temporary peer basket for testing centre-back peer-group trend analysis.
+peer_group:
+  position: CB
+  price_band: 100k_500k
+  meta_tier: strong
+  comparison_reason: Defensive pace, body type, league links, and high-end centre-back demand.
+assets:
+  - asset_id: van_dijk_gold
+    futbin_id: "placeholder_500001"
+    name: Virgil van Dijk
+    version: Gold
+    role: centre_back
+    notes: Realistic liquid elite CB placeholder.
+
+  - asset_id: promo_cb_elite_pace
+    futbin_id: "placeholder_500002"
+    name: Example Elite Pace CB
+    version: Promo
+    role: centre_back
+    notes: Placeholder for rare promo CB.
+
+  - asset_id: physical_cb_placeholder
+    futbin_id: "placeholder_500003"
+    name: Example Physical CB
+    version: Special
+    role: centre_back
+    notes: Placeholder for strong defensive profile.
+
+  - asset_id: agile_cb_placeholder
+    futbin_id: "placeholder_500004"
+    name: Example Agile CB
+    version: Special
+    role: centre_back
+    notes: Placeholder for fast/manual-defending profile.
+
+  - asset_id: league_link_cb_placeholder
+    futbin_id: "placeholder_500005"
+    name: Example League Link CB
+    version: Special
+    role: centre_back
+    notes: Placeholder for chemistry-driven demand.
