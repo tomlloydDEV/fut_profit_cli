@@ -43,3 +43,14 @@ class Basket:
     assets: list[BasketAsset]
     description: str | None = None
     metadata: dict = field(default_factory=dict)
+
+
+@dataclass(frozen=True)
+class ActivityIndexPoint:
+    basket_name: str
+    platform: str
+    timeframe: str
+    window_start_utc: datetime
+    activity_index: int
+    asset_count: int
+    active_asset_count: int
