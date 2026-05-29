@@ -6,10 +6,14 @@ from pathlib import Path
 from fc26.domain.models import SalePrint
 
 
+def normalise_asset_id(raw_asset_id: str) -> str:
+    return raw_asset_id.strip().lower().replace("-", "_")
+
+
 def parse_sale_print_row(row: dict[str, str]) -> SalePrint:
     return SalePrint(
-        asset_id=row["asset_id"],
-        platform=row["platform"],
+        asset_id=normalise_asset_id(row["asset_id"]),
+        platform=row["platform"].strip().lower(),
         ts_utc=datetime.fromisoformat(row["ts_utc"]),
         price_gross=int(row["price_gross"]),
     )

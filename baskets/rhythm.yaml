@@ -1,39 +1,11 @@
 name: rhythm_test
 basket_type: rhythm
 platform: ps
-description: Temporary liquid-card basket used to test market rhythm workflows and ActivityIndex logic.
+description: Temporary rhythm basket using assets that exist in the local SQLite fixture data.
 assets:
-  - asset_id: dembele_gold
+  - asset_id: mctominay-fut-birthday
     futbin_id: "placeholder_100001"
-    name: Ousmane Dembélé
-    version: Gold
-    role: winger
-    notes: Existing liquid-style fixture asset; useful as high-activity rhythm placeholder.
-
-  - asset_id: valverde_gold
-    futbin_id: "placeholder_100002"
-    name: Federico Valverde
-    version: Gold
-    role: box_to_box_midfielder
-    notes: Realistic always-traded meta midfielder placeholder.
-
-  - asset_id: theo_hernandez_gold
-    futbin_id: "placeholder_100003"
-    name: Theo Hernández
-    version: Gold
-    role: fullback
-    notes: Realistic high-demand defender placeholder.
-
-  - asset_id: van_dijk_gold
-    futbin_id: "placeholder_100004"
-    name: Virgil van Dijk
-    version: Gold
-    role: centre_back
-    notes: Realistic liquid high-meta defender placeholder.
-
-  - asset_id: mendy_gold
-    futbin_id: "placeholder_100005"
-    name: Ferland Mendy
-    version: Gold
-    role: fullback
-    notes: Realistic recurring meta fullback placeholder.
+    name: Scott McTominay
+    version: FUT Birthday
+    role: midfielder
+    notes: Existing local fixture asset used to prove the ActivityIndex workflow.
